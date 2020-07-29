@@ -1,11 +1,9 @@
 # -------Global variables --------
 
-
 #Game board
 board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
-
 
 # If game is still going
 game_still_going = True
@@ -16,12 +14,10 @@ winner = None
 # Who's turn is it?
 current_player = "X"
 
-
 def display_board():
   print(board[0] + " | " + board[1] +  " | " + board[2])
   print(board[3] + " | " + board[4] +  " | " + board[5])
   print(board[6] + " | " + board[7] +  " | " + board[8])
-
 
 # Play a game of ti tac toe
 def play_game():
@@ -47,7 +43,6 @@ def play_game():
   elif winner == None:
     print("Tie.")
 
-
 # Handle a single turn of an arbitrary player(Here we get integer inputs)
 def handle_turn(player):
 
@@ -70,11 +65,9 @@ def handle_turn(player):
 
   display_board()
 
-
 def check_if_game_over():
   check_for_winner()
   check_if_tie()
-
 
 def check_for_winner():
 
@@ -103,7 +96,6 @@ def check_for_winner():
     winner = None
   return
 
-
 def check_rows():
   # Set up global variables
   global game_still_going
@@ -126,7 +118,6 @@ def check_rows():
     return board[6]
 
   return
-
 
 def check_columns():
   # Set up global variables
@@ -151,7 +142,6 @@ def check_columns():
 
   return
 
-
 def check_diagonals():
   # Set up global variables
   global game_still_going
@@ -172,7 +162,6 @@ def check_diagonals():
 
   return
 
-
 def check_if_tie():
   global game_still_going
 
@@ -181,7 +170,6 @@ def check_if_tie():
     game_still_going = False
 
   return
-
 
 def flip_player():
   # global variables we need
@@ -197,7 +185,6 @@ def flip_player():
 
   return
 
-
 play_game()
 
 # Board
@@ -210,3 +197,4 @@ play_game()
   # Check Diagonals
 # Check tie
 # Flip Player
+
